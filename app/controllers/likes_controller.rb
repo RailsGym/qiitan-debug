@@ -25,4 +25,9 @@ class LikesController < ApplicationController
   def set_like
     @like = current_user.likes.find(params[:id])
   end
+
+  def set_article
+    @article = Article.find(params[:article_id])
+  end
+
 end
